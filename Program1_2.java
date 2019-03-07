@@ -35,12 +35,12 @@ class Taylorseries1 extends Thread{
 		this.tid = thread_id;
 	}
 
-	public static double Sin(double x, int n) {
+	public static void Sin(double x, int n) {
 		double sin_approx = 0;
 		for (int i=0; i<n; i++) {
 			sin_approx += Math.pow(-1, i) * Math.pow(x, 2*i+1) * Invfactorial(2*i+1);
 		}
-		return sin_approx;
+		System.out.println("sin(" + x + ") ~= " + sin_approx);
 	}
 	
 	public static double Invfactorial(int n) {
