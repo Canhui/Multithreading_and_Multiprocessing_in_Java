@@ -16,11 +16,9 @@ public class Program1_1 {
 		long end_time = System.nanoTime();
 		double cost_time = (end_time - begin_time)/(1000000000.0000);
 
-		
-//		System.out.println("cos(" + x + ") ~= " + cos_taylorseries);
 		System.out.printf("Time used for computing -> "+ series +" Taylor series of sin & cos functions = "+ cost_time + " (secs)");
 	}
-
+	
 }
 
 class Taylorseries1 {
@@ -31,7 +29,6 @@ class Taylorseries1 {
 			sin_approx += Math.pow(-1, i) * Math.pow(x, 2*i+1) * Invfactorial(2*i+1);
 		}
 		System.out.println("sin(" + x + ") ~= " + sin_approx);
-//		return sin_approx;
 	}
 	
 	public static double Invfactorial(int n) {
@@ -57,7 +54,6 @@ class Taylorseries2 {
 			cos_approx += Math.pow(-1, i) * Math.pow(x, 2*i) * Invfactorial(2*i);
 		}
 		System.out.println("cos(" + x + ") ~= " + cos_approx);
-//		return cos_approx;
 	}
 	
 	public static double Invfactorial(int n) {
